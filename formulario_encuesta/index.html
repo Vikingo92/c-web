@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Formulario de encuesta</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <header>
+                <h1 id="title">Formato de encuesta</h1>
+                <p id="description">Gracias por tomarte el tiempo de responder este formato que ayudará a ofrecer
+                    mejores servicios</p>
+            </header>
+            <form id="survey-form">
+                <div>
+                    <label id="name-label" for="name">Nombre
+                        <input type="text" id="name" placeholder="Ingresa tu nombre" required></label><br>
+                </div>
+                <br>
+                <div>
+                    <label id="email-label" for="email">Email
+                        <input type="email" id="email" placeholder="Ingresa tu email" required></label><br>
+                </div>
+                <br>
+                <div>
+                    <label id="number-label" for="number">Edad (Opcional)
+                        <input type="number" id="number" min="16" max="99" placeholder="Edad"></label><br>
+                </div>
+                <br>
+                <div>
+                    <p>¿Qué opción describe mejor su rol?</p>
+                    <div>
+                        <select id="dropdown" name="options">
+                            <option disabled selected>Selecciona el rol actual:</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trabajo-tiempo">Trabajo de tiempo completo</option>
+                            <option value="prefiero'no-responder">Prefiero no responder</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p>¿Recomendaría éste lugar a un amigo?</p>
+                    <label for="boton-definitivamente"><input id="boton-definitivamente" type="radio"
+                            name="seleccion-el" value="definitivamente">Definitivamente<br></label>
+                    <label for="boton-tal-vez"><input id="boton-tal-vez" type="radio" name="seleccion-el"
+                            value="tal-vez">Tal vez<br></label>
+                    <label for="boton-no-estoy-seguro"><input id="boton-no-estoy-seguro" type="radio"
+                            name="seleccion-el" value="no-estoy-seguro">No estoy seguro<br></label>
+                </div>
+                <div>
+                    <p>¿Qué es lo que más te gusta de este lugar?</p>
+                    <div>
+                        <select id="dropdown" name="options">
+                            <option disabled selected>Seleciona una opción</option>
+                            <option>Desafíos</option>
+                            <option>Proyectos</option>
+                            <option>Grupos de apoyo</option>
+                            <option>Open source</option>
+                        </select>
+                    </div>
+
+                    <p>¿Sobre qué temas te gustaría aprender?<span>(Selecciona todas las que apliquen)</span></p>
+                    <div class="check">
+                        
+                        <label for="front"><input id="front" value="front-end"  class="input-check" type="checkbox"
+                                name="aplly">Front-end</label><br>
+                        <label for="back"><input id="back" value="back-end" class="input-check" type="checkbox"
+                                name="apply">Back-end</label><br>
+                        <label for="machine"><input id="machine" value="machine'le" class="input-check" type="checkbox" name="apply">Machine
+                            learning</label><br>
+                        <label for="ciencia-datos"><input id="ciencia-datos" value="ciencia" class="input-check" type="checkbox"
+                                name="apply">Ciencia de datos</label><br>
+                    </div>
+                    <div>
+                        <p>¿Algún comentario o sugerencia?</p>
+                        <textarea id="sugerencia" name="comentarios" rows="10" cols="50"
+                            placeholder="Escríbelo aquí..."></textarea>
+                    </div>
+                    <div>
+                        <button id="submit" class="boton">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

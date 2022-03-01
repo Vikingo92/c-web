@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(202, 243, 139);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2.4;
+    margin: 16px;
+}
+
+#main{
+    display:inline-block;
+    padding: 15px;
+    background: lightblue;
+    border-radius: 5px;
+    margin: 30px 8px;
+
+}
+
+#title{
+    margin: 50px;
+    text-align: center;
+}
+
+#headline{
+    margin: 50px;
+    
+}
+
+#img-caption{
+    border-radius: 20px;
+    margin: 5px 0px 0;
+   font-size: 14px;
+}
+
+list{
+    text-align:left;
+    display: list-item;
+    margin:290px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    text-size-adjust: 50px;
+}
+
