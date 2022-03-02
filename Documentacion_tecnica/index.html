@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Documentacion Tecnica |</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Asincronia</header>
+        <ul>
+            <li><a class="nav-link" href="#introduccion">Introduccion</a></li>
+            <li><a class="nav-link" href="#componentes">Componentes</a></li>
+            <li><a class="nav-link" href="#clases">Clases</a></li>
+            <li><a class="nav-link" href="#particularidades">Particularidades</a></li>
+            <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section" id="introduccion">
+            <header>Introduccion</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nam culpa itaque dolorem eveniet
+                quibusdam, in et error. Assumenda similique inventore voluptatibus consectetur voluptatum pariatur
+                asperiores tempora id corrupti temporibus?</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, molestiae! Repudiandae natus debitis
+                inventore iste itaque nisi doloribus quaerat, quam nulla error voluptate sed expedita mollitia, rerum
+                quas id. Iusto?
+            </p>
+            <code>
+                function myFunc(theObject) {
+                    theObject.make = 'Toyota';
+                }
+
+                [parcial]var my car = { make: 'Hola', model: 'Accord', year: 1998 };
+                var x, y;
+
+                myFunc(mycar);
+                y = mycar.make;
+            </code>
+            <ul>
+                <li>este código añade al array inicial tres números, el 4, el 5 y el 6. Estos números se añaden en un
+                    orden desconocido, el motivo es que la función addToArray hace uso de la función de javascript
+                    setTimeout. Esta función ejecuta el array.push después de un tiempo. En el caso del ejemplo el
+                    tiempo es elegido al azar por Math.random(). El resultado es que los elementos 4, 5 y 6 no se conoce
+                    de antemano en que orden apareceran. A cada ejecución el orden variará: [1, 2, 3, 5, 4, 6] o [1, 2,
+                    3, 6, 4, 5] o cualquier otra combinación.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="componentes">
+            <header>Componentes</header>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio asperiores incidunt eius, commodi quia
+                reprehenderit veritatis nemo omnis ipsa ipsum distinctio aut dolor fuga vel quis aspernatur libero
+                officia explicabo.
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, ea ut? Nemo, mollitia sequi possimus
+                rem voluptatem cumFFFque ratione, perspiciatis laudantium autem placeat corrupti, excepturi illo?
+                Tempore nobis vel voluptas.
+            </p>
+            <code>
+                function addToArray (data, array) {
+                    setTimeout (function()) {
+                        array.push(data);
+                    }, Math.random() * 100);
+
+                }
+
+                Let array  = [1,2,3]
+                addToArray(4, array);
+                addToArray(5, array);
+                addToArray(6, array);
+                setTimeout(() => console.log(array), 10000);
+            </code>
+            <ul>
+                <li>en este caso aunque addToArray sigue añadiendo los elementos en un tiempo indeterminado, se consigue
+                    que 4, 5 y 6 se añadan en el mismo orden siempre. Aquí la llamada a añadir el siguiente número es un
+                    callback del número anterior. Esto debido al funcionamiento interno de javascript que gestiona el
+                    orden en que se ejecutan las funciones con el stack queue y el callback queue hace que hasta que no
+                    se acaba de añadir el 4, no se añada el 5 y hasta que se acaba de añadir el 5 no se añada el 6. La
+                    importancia de esta técnica es conseguir sicronía cuando se necesita. Por ejemplo no mostrar una
+                    lista desplegable, mientras no tenemos disponibles los datos.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="clases">
+            <header>Clases</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum assumenda quaerat dolor dicta ex
+                provident quibusdam placeat quasi, est fugiat natus velit animi praesentium cupiditate similique at
+                obcaecati quas explicabo.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi commodi voluptatibus
+                praesentium qui, voluptatem suscipit tempora, fugiat quia, quo expedita ipsa. Esse quasi, neque aperiam
+                deserunt rem recusandae quos.
+            </p>
+            <code>
+                function addToArray(data, array funcAddNextNumber) {
+                    setTimeout(function() {
+                        funcAddNextNumbers(array.push(data));
+                    }, Math.random() * 100);
+
+                }
+
+                let array = [1,2,3]
+            </code>
+            <ul>
+                <li>
+                    El método then del objeto promise hace que no se ejecute una función hasta que no haya terminado la
+                    anterior. Importante hacer notar que la función a controlar, en este caso addToArray debe devolver
+                    un objeto Promise para poder utilizar el método then.
+
+                    Espero que este sencillo ejemplo le pueda ayudar a algún abnegado desarrollador para entender como
+                    funcionan las técnicas para manejar la asincronía intrinseca de javascript.
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="particularidades">
+            <header>Particularidades</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum culpa qui. Animi iusto assumenda
+                eum, suscipit, tenetur velit fugit maxime culpa esse id necessitatibus pariatur, voluptatibus molestias
+                fuga minus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eaque reprehenderit dicta optio
+                tempore vel, rerum facilis ab exercitationem dolore illo! Ab quae nihil molestias quaerat! Quod adipisci
+                ea numquam.
+            </p>
+            <code>
+                addToArray(4, array, function() {
+                    console.log('Anade 4: ', array )
+                    addToArray(5, array, function() {
+                        console.log(('Anade5: ', array)
+                        addToArray(6, array, function() {
+                            console.log('Anade 6: ', array)
+                        })
+                        )
+                    })
+                })
+            </code>
+            <ul>
+                <li>
+                    La asincronía es uno de los conceptos principales que rige el mundo de Javascript. Cuando comenzamos
+                    a programar, normalmente realizamos tareas de forma síncrona, llevando a cabo tareas secuenciales
+                    que se ejecutan una detrás de otra.
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cupiditate corrupti ratione possimus!
+                Impedit repudiandae maiores eum et quasi voluptate pariatur consequuntur, exercitationem, rerum nobis
+                hic eius perspiciatis? Natus, magni.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim maiores quasi aperiam quidem eveniet
+                soluta odit excepturi culpa, officiis aliquid. Officiis excepturi delectus harum consequatur dolor
+                libero quasi eveniet minus!
+            </p>
+            <code>
+                function addToArray (data, array) {
+                    const promise = new Promise(function (resolve, reject) {
+                        setTimeout(function() {
+                            array.push(data);
+                            resolve(array);
+                        }, Math.random() * 10 + 1000);
+                    })
+
+                    return promise
+                }
+            </code>
+            <ul>
+                <li>
+                    Cuando hablamos de Javascript, habitualmente nos referimos a él como un lenguaje no bloqueante. Con
+                    esto queremos decir que las tareas que realizamos no se quedan bloqueadas esperando ser finalizadas,
+                    y por consiguiente, evitando proseguir con el resto de tareas.
+                </li>
+            </ul>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
