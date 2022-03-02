@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+body {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem; /*18px*/
+    scroll-behavior: smooth;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* 1200px / 16 px = 75em */
+@media (max-width: 75em) {
+    body {
+        font-size: 58%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    body {
+        font-size: 58%;
+    }
+}
+
+h1 {
+    font-family: monospace;
+    text-align:center;
+    font-weight: 700;
+}
+
+nav {
+    display:flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color:rgb(85, 85, 128);
+    /* z-index: 10; */
+}
+
+.menu {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.menu a{
+    display: block;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.menu a:hover {
+    background-color:darkgray;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(136, 182, 197);
+    color: white;
+}
+
+#welcome-section h2 {
+    font-weight: 200;
+
+}
+
+#projects {
+    background-color:lightsteelblue;
+    color:white;
+    text-align:center;
+    padding: 10rem 2rem;
+}
+
+.project-title {
+    border-bottom: 0.1rem solid white;
+    max-width:400px;
+    margin: 0 auto 6rem auto;
+}
+
+.proyectos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.img1 {
+    box-shadow: 1px 1px  2px rgba(0,0,0,0.5);
+    height: calc(100% - 1rem);
+    width:100%;
+    object-fit:cover;
+}
+
+.projects {
+    background-color:rgb(85, 85, 153);
+    border-radius: 2px;
+    box-shadow: 1px 1px  2px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.contacto {
+    background-color:rgb(113, 113, 160);
+    justify-content: center;
+    height: 80vh;
+    padding: 4rem 2rem;
+}
+
+.header{
+    border-bottom: 0.1rem solid white;
+    text-align:center;
+    max-width:700px;
+    margin: 0 auto 6rem auto;
+    color: white;
+}
+
+#profile-link{
+    justify-content: center;
+    display:flex;
+    font-weight:600;
+}
+   
+#contact p {
+    font-weight: 200;
+
+}
+
+footer {
+    display: flex;
+    background-color: rgb(85, 85, 153);
+    justify-content: space-evenly;
+    color:aliceblue;
+    padding:1rem;
+    font-size: 1rem;
+}
